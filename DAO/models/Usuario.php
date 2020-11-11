@@ -6,7 +6,7 @@ class Usuario {
     private $email;
 
     public function getId() {
-        return $this->$id;
+        return $this->id;
     }
     public function setId($i) {
         $this->id = trim($i);
