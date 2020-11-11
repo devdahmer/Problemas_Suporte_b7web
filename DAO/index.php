@@ -1,5 +1,5 @@
 <?php
-require "config.php";
+require 'config.php';
 require 'dao/UsuarioDaoMysql.php';
 
 $usuarioDao = new UsuarioDaoMysql($pdo);
@@ -19,8 +19,8 @@ $lista = $usuarioDao->findAll();
     <?php foreach($lista as $usuario): ?>
         <tr>
             <td><?php $usuario->getId();?></td>
-            <td><?php $usuario->getId();?></td>
-            <td><?php $usuario->getId();?></td>
+            <td><?php $usuario->getNome();?></td>
+            <td><?php $usuario->getEmail();?></td>
             <td>
                 <a href="editar.php?id=<?php $usuario->getId();?>">[ Editar ]</a>
                 <a href="excluir.php?id=<?php $usuario->getId();?>" onclick="return confirm('Tem certeza que deseja excluir este cadastro ?')">[ Excluir ]</a>
